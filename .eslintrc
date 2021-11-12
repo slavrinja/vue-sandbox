@@ -3,63 +3,74 @@
     "browser": true,
     "es6": true,
     "node": true
+//    "jest/globals": true
   },
+  "plugins": [
+    "babel",
+    "import",
+    "vue",
+    "node",
+    "promise"
+    //    "prettier"
+  ],
   "parserOptions": {
     "parser": "babel-eslint"
   },
   "extends": [
-    "airbnb-base",
+    "airbnb",
+    "eslint:recommended",
     "plugin:vue/recommended"
+//    "plugin:jest/recommended"
   ],
   "rules": {
+    "linebreak-style": "off", // Неправильно работает в Windows
+    "arrow-parens": "off", // Несовместимо с prettier
+    "object-curly-newline": "off", // Несовместимо с prettier
+    "no-mixed-operators": "off", // Несовместимо с prettier
+    "function-paren-newline": "off", // Несовместимо с prettier,
+    "space-before-function-paren": 0, // Несовместимо с prettier,
+//    "prettier/prettier": ["error"],
+    "prefer-destructuring": "off",
+    "arrow-body-style": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "max-len": ["error", 120, 2, { "ignoreUrls": true }], // airbnb позволяет некоторые пограничные случаи
+    "no-console": "error", // airbnb использует предупреждение
+    "no-alert": "error", // airbnb использует предупреждение
+    "radix": "off", // parseInt, parseFloat и radix выключены. Мне это не нравится.
     "space-before-blocks": "off",
     "quotes": "off",
-//    "no-extra-semi": "off",
+    "no-extra-semi": "off",
     "no-unused-vars": 1,
-    "no-plusplus": "off",
-    "no-trailing-spaces": [
-      "off"
-    ],
-    "import/no-extraneous-dependencies": [
+    "vue/html-closing-bracket-spacing": [
       "error",
       {
-        "devDependencies": true
+        "startTag": "never",
+        "endTag": "never",
+        "selfClosingTag": "never"
       }
     ],
-    "indent": [
+    "vue/html-closing-bracket-newline": [
       "error",
-      2,
       {
-        "SwitchCase": 1
+        "singleline": "never",
+        "multiline": "always"
       }
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": {
+        "max": 3
+      },
+      "multiline": {
+        "max": 1
+      }
+    }],
+    "vue/no-use-v-if-with-v-for": ["error", {
+      "allowUsingIterationVar": false
+    }],
     "semi": [
       "error",
       "never"
-    ],
-    "comma-dangle": [
-      "error",
-      "only-multiline"
-    ],
-    "vue/html-closing-bracket-spacing": ["error", {
-      "startTag": "never",
-      "endTag": "never",
-      "selfClosingTag": "never"
-    }],
-    "vue/html-closing-bracket-newline": ["error", {
-      "singleline": "never",
-      "multiline": "always"
-    }],
-    "vue/max-attributes-per-line": ["error", {
-      "singleline": 3,
-      "multiline": {
-        "max": 1,
-        "allowFirstLine": false
-      }
-    }]
+    ]
   }
 }

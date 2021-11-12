@@ -17,7 +17,7 @@ export default {
   name: 'Dashboard',
 
   data: () => ({
-    loading: false
+    loading: false,
   })
 }
 </script>

@@ -1,10 +1,13 @@
 <template>
   <div id="app">
     <nav class="nav">
-      <router-link to="/dashboard" class="nav-link">
+      <router-link         to="/dashboard"
+        data-class="nav-link"
+        class="nav-link"
+      >
         dashboard
       </router-link>
-      <router-link to="/transactions" class="nav-link">
+      <router-link to="/transactions" class="nav-link" sclass="nav-link" class="nav-link" data-class="nav-link">
         transactions
       </router-link>
     </nav>
@@ -17,10 +20,9 @@
 </template>
 
 <script>
-
 export default {
   name: 'App',
-  components: {}
+  components: {},
 }
 </script>
 
@@ -29,5 +31,4 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   color: #2c3e50;
 }
-
 </style>
