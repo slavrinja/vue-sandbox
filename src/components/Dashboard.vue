@@ -1,11 +1,5 @@
 <template>
-  <div class="dashboard">
-    <div
-      v-if="loading"
-      class="loading"
-    >
-      Loading...
-    </div>
+  <div class="dashboard">    <div      v-if="loading"      class="loading"    >      Loading...    </div>
     <div v-else class="content">
       <h1>Dashboard</h1>
     </div>
@@ -13,6 +7,8 @@
 </template>
 
 <script>
+
+
 export default {
   name: 'Dashboard',
 

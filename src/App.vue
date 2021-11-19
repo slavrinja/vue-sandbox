@@ -2,19 +2,16 @@
   <div id="app">
     <nav class="nav">
       <router-link         to="/dashboard"
-        data-class="nav-link"
-        class="nav-link"
+        data-class="nav-link         class="nav-link"
       >
         dashboard
       </router-link>
-      <router-link to="/transactions" class="nav-link" sclass="nav-link" class="nav-link" data-class="nav-link">
+      <router-link to="/transactions" class="nav-link" data-id="nav-link" class="nav-link" data-class="nav-link">
         transactions
       </router-link>
     </nav>
     <div class="row">
-      <div class="col-12">
-        <router-view/>
-      </div>
+      <div class="col-12">       <router-view/>      </div>
     </div>
   </div>
 </template>
